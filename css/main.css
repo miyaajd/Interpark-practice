@@ -1,0 +1,122 @@
+@charset "utf-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial,
+    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* 전체레이아웃 */
+
+.wrap {
+  margin: 50px auto;
+  width: 1280px;
+}
+
+/* 리스트 ul */
+
+.list-box {
+  display: flex;
+  gap: 20px;
+}
+.img-box {
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* 리스트 li */
+
+.list-box li {
+  width: calc(100% / 4);
+}
+.list-box img {
+  display: block;
+  width: 100%;
+}
+
+/* 이미지 애프터 */
+
+.img-box::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, transparent 70%, rgba(85, 84, 84, 0.7));
+}
+
+/* 랭크숫자 */
+
+.rank{
+    font-size: 70px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 2%;
+    left: 8%;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* hot 스티커 */
+
+.hot{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #ef3e43;
+    border-radius: 50%;
+    padding: 20px 13px;
+    color: #fff;
+}
+/* 텍스트박스 */
+
+.text {
+  padding: 20px 10px;
+  width: 100%;
+}
+.text b {
+  font-size: 22px;
+}
+.text p {
+  font-size: 20px;
+  font-weight: 450;
+  color: #666;
+  padding: 8px 0;
+}
+.date {
+  display: block;
+  color: #777;
+  padding: 0 0 15px;
+  font-size: 18px;
+}
+.box-text-red {
+  font-weight: 500;
+  padding: 4px 8px;
+  border: 0.3px solid rgba(239, 62, 67, 0.3);
+  color: #ef3e43;
+  border-radius: 5px;
+}
+.box-text-blue {
+  font-weight: 500;
+  padding: 4px 8px;
+  border: 0.3px solid rgba(74, 149, 255, 0.3);
+  color: #4a95ff;
+  border-radius: 5px;
+}
